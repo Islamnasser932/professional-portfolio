@@ -52,7 +52,7 @@ export default function IslamNasserPortfolio() {
   // Handle scroll to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "experience", "education", "projects", "certificates", "contact"]
+      const sections = ["home", "about", "skills", "experience", "projects", "certificates", "contact"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -99,7 +99,7 @@ export default function IslamNasserPortfolio() {
       title: "Machine Learning",
       items: [
         "Regression Analysis",
-        "Classification Techniques",
+        "Classification Techniques (Random Forest, XGBoost)",
         "Clustering (K-Means, DBSCAN)",
         "Model Evaluation & Tuning",
       ],
@@ -159,15 +159,7 @@ export default function IslamNasserPortfolio() {
     },
   ]
 
-  const education = [
-    {
-      degree: "Bachelor of Commerce",
-      institution: "Ain Shams University",
-      date: "2020 – 2025",
-      description:
-        "Comprehensive studies in business administration, economics, and management principles, providing a strong foundation for data-driven business analysis and decision making.",
-    },
-  ]
+
 
   const projects = [
     {
@@ -284,7 +276,6 @@ export default function IslamNasserPortfolio() {
     { id: "about", label: "About", icon: <User className="w-4 h-4" /> },
     { id: "skills", label: "Skills", icon: <Brain className="w-4 h-4" /> },
     { id: "experience", label: "Experience", icon: <Briefcase className="w-4 h-4" /> },
-    { id: "education", label: "Education", icon: <GraduationCap className="w-4 h-4" /> },
     { id: "projects", label: "Projects", icon: <Code className="w-4 h-4" /> },
     { id: "certificates", label: "Certificates", icon: <Award className="w-4 h-4" /> },
     { id: "contact", label: "Contact", icon: <Mail className="w-4 h-4" /> },
@@ -508,6 +499,7 @@ export default function IslamNasserPortfolio() {
         </div>
       </section>
 
+
       {/* Skills Section */}
       <section id="skills" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -542,6 +534,7 @@ export default function IslamNasserPortfolio() {
         </div>
       </section>
 
+
       {/* Experience Section */}
       <section id="experience" className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -549,6 +542,7 @@ export default function IslamNasserPortfolio() {
             <h2 className="text-4xl font-bold mb-4 text-foreground">Work Experience</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-pink-400 mx-auto"></div>
           </div>
+
 
           <div className="space-y-8">
             {experience.map((exp, index) => (
@@ -572,35 +566,7 @@ export default function IslamNasserPortfolio() {
         </div>
       </section>
 
-      {/* Education Section */}
-      <section id="education" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Education</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-pink-400 mx-auto"></div>
-          </div>
 
-          <div className="space-y-8">
-            {education.map((edu, index) => (
-              <Card key={index} className="bg-card border-border border-l-4 border-l-accent">
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-accent">{edu.degree}</h3>
-                      <p className="text-lg text-muted-foreground">{edu.institution}</p>
-                    </div>
-                    <Badge variant="outline" className="border-primary text-primary mt-2 md:mt-0 bg-transparent">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {edu.date}
-                    </Badge>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">{edu.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-muted/50">
